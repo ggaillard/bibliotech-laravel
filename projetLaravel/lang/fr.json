@@ -1,0 +1,15 @@
+{
+    "Showing": "Affichage de",
+    "to": "à",
+    "of": "sur",
+    "results": "résultats",
+    "Previous": "Précédent",
+    "Next": "Suivant",
+    "Pagination Navigation": "Navigation de la pagination",
+    "Go to page :page": "Aller à la page :page",
+    "Too Many Requests": "Trop de requêtes",
+    "Page Expired": "Page expirée",
+    "Not Found": "Introuvable",
+    "Forbidden": "Accès interdit",
+    "Server Error": "Erreur du serveur"
+}

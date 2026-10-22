@@ -1,0 +1,45 @@
+name: "❓ Question sur une séance"
+description: "Poser une question ou signaler un blocage"
+title: "[S?] Titre de votre question"
+labels: ["question"]
+body:
+  - type: dropdown
+    id: seance
+    attributes:
+      label: "Séance concernée"
+      options:
+        - "Mise en route (Codespace, MySQL, phpMyAdmin)"
+        - "Séance 1 – Routes, contrôleurs, vues"
+        - "Séance 2 – Base de données & Eloquent"
+        - "Séance 3 – Gestion : ajouter"
+        - "Séance 4 – Gestion : modifier, supprimer"
+        - "Séance 5 – Authentification & rôles"
+        - "Séance 6 – Emprunts"
+        - "Séance 7 – API REST"
+        - "Séance 8 – Qualité, sécurité, mise en production"
+    validations:
+      required: true
+  - type: input
+    id: mission
+    attributes:
+      label: "Mission"
+      placeholder: "ex : 3.2"
+  - type: input
+    id: commande
+    attributes:
+      label: "Commande exécutée ou page ouverte"
+      placeholder: "ex : php artisan test --group=seance-03"
+    validations:
+      required: true
+  - type: textarea
+    id: erreur
+    attributes:
+      label: "Message d'erreur complet"
+      description: "Copiez-collez le message (terminal ou page d'erreur Laravel)."
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: tentatives
+    attributes:
+      label: "Ce que j'ai déjà essayé"

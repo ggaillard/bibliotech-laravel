@@ -1,0 +1,23 @@
+name: "Qualité – style du code (Pint)"
+
+on:
+  push:
+    paths: ["projetLaravel/**", ".github/workflows/qualite.yml"]
+  workflow_dispatch:
+
+jobs:
+  pint:
+    name: "🎨 Laravel Pint --test"
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projetLaravel
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.4"
+          coverage: none
+      - run: composer install --no-interaction --prefer-dist --no-progress
+      - name: "Le code respecte-t-il le style Laravel ?"
+        run: ./vendor/bin/pint --test
